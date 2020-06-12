@@ -1,0 +1,15 @@
+.homePage {
+    background-image: url(../../Resource/foodHome.jpg);
+    height:100vh;
+    background-size: cover;
+    display:flex;
+    flex-direction: row;
+}
+.halfBg {
+    width:50%;
+    background-size: cover;
+    background-color: black;
+    opacity: 0.3;
+    font-family: 'Cinzel', serif;
+    color: white
+}
