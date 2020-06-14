@@ -1,83 +1,90 @@
-export const data = [
+export const data = 
     
     [
         {
             "name": "The Only Place",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Chicken and Beef Steak, and Lasagna",
-            "cost": "200",
+            "category": ["Chicken", "Beef Steak", "Lasagna"],
+            "cost": 200,
             "payment": {
                 "card": true,
                 "cash": true},
             "votes": "766 votes",
             "reviews": "228 reviews",
-            "ratings": "3"
+            "ratings": "3",
+            "place":"Koramangala"
+
         },
         {
             "name": "Truffles Koramangala",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Snicker Shake, Thick Shakes, Peri Peri Chicken Steak, and Chicken Wings",
-            "cost": "200",
+            "category": ["Snicker Shake", "Thick Shakes", "Peri Peri Chicken Steak", "Chicken Wings"],
+            "cost": 200,
             "payment": {
                 "card":true,
                 "cash":false},
             "votes": "766 votes",
             "reviews": "467 reviews",
-            "ratings": "4"
+            "ratings": "4",
+            "place":"Koramangala"
         },
         {
             "name": "Smally’s Resto Cafe",
             "image": "https://via.placeholder.com/80X140",
-            "category": "North Indian, Butter Chicken, Shahi Paneer",
-            "cost": "300",
+            "category": ["Chicken Kebab", "Tandoori Chicken", "Chicken Biryani", "Seafood"],
+            "cost": 300,
             "payment": {
                 "card":true,
                 "cash":false},
             "votes": "336 votes",
             "reviews": "552 reviews",
-            "ratings": "4"
+            "ratings": "4",
+            "place":"Indiranagar"
         },
         {
             "name": "Koshy’s Restaurant",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Dessert, Coffee, Chocolate Shake, Caramel Custard",
-            "cost": "200",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 200,
             "payment": {
                 "card":true,
                 "cash":false},
             "votes": "766 votes",
             "reviews": "456 reviews",
-            "ratings": "2"
+            "ratings": "2",
+            "place":"Whitefield"
         },
         {
             "name": "Corner House Ice Cream",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Hot Chocolate Fudge, Brownie Sundae, and Apple Pie",
-            "cost": "200",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 200,
             "payment": {
                 "card": true,
                 "cash": true},
             "votes": "540 votes",
             "reviews": "552 reviews",
-            "ratings": "3"
+            "ratings": "3",
+            "place":"Indiranagar"
         },
         {
             "name": "Mavalli Tiffin Room (MTR), Lalbagh Road",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Dosas, Idli, and Badam Halwa",
-            "cost": "250",
+            "category": ["Continental", "Dosas", "Biriyani", "Paratha", "Idli" ],
+            "cost": 250,
             "payment": {
                 "card":false,
                 "cash":true},
             "votes": "766 votes",
             "reviews": "228 reviews",
-            "ratings": "4"
+            "ratings": "4",
+            "place":"Sarjapur Road"
         },
         {
             "name": "Shri Sagar CTR (Central Tiffin Room)",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Continental,Dosas",
-            "cost": "300",
+            "category": ["Continental", "Dosas", "Biriyani", "Paratha", "Idli" ],
+            "cost": 300,
             "payment": {
                 "card": true,
                 "cash": true},
@@ -90,8 +97,8 @@ export const data = [
         {
             "name": " Nagarjuna (Andhra Cuisine)",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Andhra cuisine",
-            "cost": "300",
+            "category": ["Continental", "Dosas", "Biriyani", "Paratha", "Idli" ],
+            "cost": 300,
             "payment": {
                 "card": true,
                 "cash": true},
@@ -103,8 +110,8 @@ export const data = [
         {
             "name": "Toit Indiranagar",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Dessert, Brewery",
-            "cost": "200",
+            "category": ["Chicken Kebab", "Tandoori Chicken", "Chicken Biryani", "Seafood"],
+            "cost": 200,
             "payment": {
                 "card": true,
                 "cash": true},
@@ -116,8 +123,8 @@ export const data = [
         {
             "name": "The Humming Tree",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Continental",
-            "cost": "250",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 250,
             "payment": {
                 "card":false,
                 "cash":true},
@@ -129,8 +136,8 @@ export const data = [
         {
             "name": "Big Brewsky",
             "image": "https://via.placeholder.com/80X140",
-            "category": "North Indian, Finger food, and Craft beer",
-            "cost": "300",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 300,
             "payment": {
                 "card": true,
                 "cash": true},
@@ -142,8 +149,8 @@ export const data = [
         {
             "name": "Windmill Craftworks",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Microbrewery,Dessert",
-            "cost": "250",
+            "category": ["Chicken Kebab", "Tandoori Chicken", "Chicken Biryani", "Seafood"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -155,8 +162,8 @@ export const data = [
         {
             "name": "Hard Rock Cafe",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Burgers, Continental",
-            "cost": "250",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 250,
             "payment": {
                 "card": true,
                 "cash": true},
@@ -168,8 +175,8 @@ export const data = [
         {
             "name": "Shiros",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Japanese ",
-            "cost": "250",
+            "category": ["Japanese", "Chicken Kebab", "Tandoori Chicken", "Chicken Biryani", "Seafood"],
+            "cost": 250,
             "payment": {
                 "card": true,
                 "cash": true},
@@ -182,8 +189,8 @@ export const data = [
         {
             "name": "Mamagoto",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Japanese, Chinese",
-            "cost": "300",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 300,
             "payment": {
                 "card":false,
                 "cash":true},
@@ -195,8 +202,8 @@ export const data = [
         {
             "name": "Grasshopper",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Continental",
-            "cost": "250",
+            "category": ["Chicken Kebab", "Tandoori Chicken", "Chicken Biryani", "Seafood"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -208,8 +215,8 @@ export const data = [
         {
             "name": "Koramangala Social",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Pancakes, Biryani, Mocktails",
-            "cost": "300",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 300,
             "payment": {
                 "card":false,
                 "cash":true},
@@ -222,8 +229,8 @@ export const data = [
         {
             "name": "Hole In The Wall Cafe",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Pancakes, Waffles, English breakfast",
-            "cost": "200",
+            "category": ["Dessert", "Coffee", "Chocolate Shake", "Caramel Custard"],
+            "cost": 200,
             "payment": {
                 "card":false,
                 "cash":true},
@@ -236,8 +243,8 @@ export const data = [
         {
             "name": "The Egg Factory",
             "image": "https://via.placeholder.com/80X140",
-            "category": "French toast, bun masala, Egg Kejriwal",
-            "cost": "200",
+            "category": ["Chicken Kebab", "Tandoori Chicken", "Chicken Biryani", "Seafood"],
+            "cost": 200,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -250,8 +257,8 @@ export const data = [
         {
             "name": "Imperial Restaurant",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Chicken Kebab, Tandoori Chicken, Chicken Biryani",
-            "cost": "250",
+            "category": ["Chicken Kebab", "Tandoori Chicken", "Chicken Biryani", "Seafood"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -264,8 +271,8 @@ export const data = [
         {
             "name": "Empire Restaurant",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Paneer Tikka, Pepper Chicken, Jumbo Shawarma",
-            "cost": "250",
+            "category": ["Paneer Tikka", "Pepper Chicken", "Jumbo Shawarma", "Continental"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -278,8 +285,8 @@ export const data = [
         {
             "name": "Mangalore Pearl",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Continental,Seafood, Mangalorean",
-            "cost": "250",
+            "category": ["Continental","Seafood", "Mangalorean"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -292,8 +299,8 @@ export const data = [
         {
             "name": "Nasi and Mee Asian Canteen",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Thai, Singaporean, and Chinese",
-            "cost": "250",
+            "category": ["Thai", "Singaporean", "Chinese"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -306,8 +313,8 @@ export const data = [
         {
             "name": "The Black Pearl",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Thai, Singaporean,Chinese, Barbecue",
-            "cost": "250",
+            "category": ["Thai", "Singaporean","Chinese", "Barbecue"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -320,8 +327,8 @@ export const data = [
         {
             "name": "Rogue",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Thai, Singaporean, and Chinese",
-            "cost": "250",
+            "category": ["Thai", "Singaporean", "Chinese"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -333,8 +340,8 @@ export const data = [
         {
             "name": "Mercy Dew",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Thai, Singaporean, and Chinese",
-            "cost": "250",
+            "category": ["Thai", "Singaporean", "Chinese"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false },
@@ -346,8 +353,8 @@ export const data = [
         {
             "name": "Fooding Race",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Thai, Singaporean, and Chinese",
-            "cost": "250",
+            "category": ["Thai", "Singaporean", "Chinese"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -359,8 +366,8 @@ export const data = [
         {
             "name": "Hunger-Relay",
             "image": "https://via.placeholder.com/80X140",
-            "category": "Thai, Singaporean, and Chinese",
-            "cost": "250",
+            "category": ["Thai", "Singaporean","Chinese"],
+            "cost": 250,
             "payment": {
                 "card":true,
                 "cash":false},
@@ -371,4 +378,3 @@ export const data = [
         }
     ]
 
-]

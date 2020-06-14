@@ -29,7 +29,6 @@ export default class NavbarHeader extends Component {
     super(props);
 
     this.state = {
-      value:"",
       isOpen: false
     };
 
@@ -51,7 +50,6 @@ export default class NavbarHeader extends Component {
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto " navbar>
-
                 {links.map(createNavItem)}
               </Nav>
             </Collapse>

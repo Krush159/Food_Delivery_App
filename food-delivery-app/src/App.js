@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './Component/Pages/Home';
-import Footer from './Component/Footer/Footer';
+// import Footer from './Component/Footer/Footer';
 import NavbarHeader from './Component/Header/Navbar';
 import Routing from './Routing/Routes';
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NavbarHeader />
       <Routing/>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
