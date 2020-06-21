@@ -1,11 +1,15 @@
-import * as actions from './actionType'
-import { data } from '../data'
+import * as actions from '../actionType'
+import { data } from '../../data'
 const initState = {
     data: data,
-
+    cart: [],
+    logName:"",
+    user: []
+    
 }
 const reducer = (state = initState, action) => {
     console.log(action.payload)
+    console.log(state.cart)
     switch (action.type) {
         case actions.SEARCH_PRODUCT:
             return {
@@ -50,17 +54,39 @@ const reducer = (state = initState, action) => {
                 ...state,
                 data: state.data.length > 0 ? [...state.data.sort((a, b) => {
                     if (action.payload === "asc") {
-                        return (a.cost - b.cost)
+                        return (a.ratings - b.ratings)
                     }
                     else if (action.payload === "desc") {
-                        return (b.cost - a.cost)
+                        return (b.ratings - a.ratings)
                     }
                 })
                 ] : state.data
             }
         case actions.ADD_TO_CART:
-            return { ...state }
-        case actions.ADD_TO_ORDERS:
+            let items = {
+                id: action.payload2.id,
+                name: action.payload1.name,
+                menu : action.payload2.menu,
+                cost: action.payload1.cost,
+                rating:action.payload1.ratings,
+                place:action.payload1.place,
+                count:action.payload2.count
+            }
+            return { ...state,
+                        cart: [...state.cart,items] ,
+                        
+            }
+        case actions.DECREMENT_QUANTITY:
+            return {
+                ...state,
+                data: state.data
+            }
+        case actions.LOGGED_IN_USERNAME:
+            return {
+                ...state,
+                logName: action.payload
+            }
+        case actions.ADD_ITEMS_TO_RESTAURANT:
             return { ...state }
         default:
             return state

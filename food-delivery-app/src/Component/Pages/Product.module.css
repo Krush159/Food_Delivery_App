@@ -1,20 +1,26 @@
 .main {
-    width:400px;
-    height:450px;
+    width:300px;
+    height:350px;
     margin: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 10px;
+    transition: transform .4s;
+}
+.main:hover {
+    transform: scale(1.02);
 }
 .header {
     width:100%;
-    border-bottom:1px solid black;
+    /* border-bottom:1px solid black; */
     height:90%;
     display:flex;
     flex-direction: column;
 }
 .img {
     width:100%;
+    
 }
+
 .middle {
     padding:10px;
     display: flex;
@@ -32,16 +38,9 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.footer {
-    height:10%;
-    text-align: center;
-    font-size: 25px;
-    background-color: rgb(23, 151, 23);
-    color: white;
-}
+
 
 .card {
-    
     margin:20px;
     display:flex;
     flex-direction:row;

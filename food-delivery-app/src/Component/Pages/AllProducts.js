@@ -1,10 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { search, handleRating, handlePayment, handleSort } from '../../Redux/action'
 import styles from './Card.module.css'
 import { Button } from 'reactstrap'
 import newfood from '../../Resource/newfood.jpg'
+import carou1 from '../../Resource/carousal 1.jpg'
+import carou2 from '../../Resource/carousel-1.png'
+import carou3 from '../../Resource/carousel-2.png'
 // import { data } from '../../data'
 
 class AllProducts extends React.Component {
@@ -12,15 +15,15 @@ class AllProducts extends React.Component {
         super(props)
         this.state = {
             value: '',
-           
+
         }
     }
-   
-    bysearch= (a) => {
-       this.props.search(a)
+
+    bysearch = (a) => {
+        this.props.search(a)
     }
     handleFilterRating = (rating) => {
-       
+
         this.props.handleRating(rating)
     }
     handleNewSort = (order) => {
@@ -29,23 +32,75 @@ class AllProducts extends React.Component {
     handleNewPayment = (method) => {
         this.props.handlePayment(method)
     }
-   
+
     render() {
-        const { data,match } = this.props
+        const { data, match } = this.props
         console.log(data)
         return (
             <div className="container-fluid">
-                <div style={{ marginTop: 150 }}>
-                    <input
-                        placeholder="Search Restaurants in Bangalore"
-                        style={{ width: 500 }}
-                        value={this.state.value}
-                        onChange={e =>
-                            this.setState({
-                                value: e.target.value
-                            })
-                        } />
-                    <Button onClick={() => this.bysearch(this.state.value)}>Search</Button>
+                <div className='container-fluid bg-dark' style={{ marginTop: 75, height: 400, alignItems: "center" }}>
+                    <div className="carousel slide container" data-ride="carousel">
+                        <ol className="carousel-indicators">
+                            <li data-slide-to="0" className="active"></li>
+                            <li data-slide-to="1"></li>
+                            <li data-slide-to="2"></li>
+                        </ol>
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <img src={carou1} className="d-block w-100" alt="..." height="400px" />
+                                <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                                    <h1>50% off on all order*</h1>
+                                    <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
+                                </div>
+                            </div>
+                            <div className="carousel-item">
+                                <img src={carou2} className="d-block w-100" alt="..." height="400px" />
+                                <div className="carousel-caption d-none d-md-block  bg-white" style={{ opacity: 0.5, color: "black" }}>
+                                    <h1>50% off on all order*</h1>
+                                    <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
+                                </div>
+                            </div>
+                            <div className="carousel-item">
+                                <img src={carou3} className="d-block w-100" alt="..." height="400px" />
+                                <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                                    <h1>50% off on all order*</h1>
+                                    <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Previous</span>
+                        </a>
+                        <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div style={{ marginLeft: 350, position: "fixed", top: 15, width: "700px", zIndex: 10000 }}>
+                    <div className="input-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            value={this.state.value}
+                            placeholder="Search Restaurants in Bangalore"
+                            aria-label="Restaurants Name"
+                            aria-describedby="button-addon2"
+                            onChange={e =>
+                                this.setState({
+                                    value: e.target.value
+                                })}
+                        />
+                        <div className="input-group-append">
+                            <button
+                                onClick={() => this.bysearch(this.state.value)}
+                                className="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon2"
+                            >Search</button>
+                        </div>
+                    </div>
                 </div>
                 <div className="row mt-5">
                     <div className="col-3">
@@ -56,7 +111,7 @@ class AllProducts extends React.Component {
                                 <div>Ratings</div>
                                 <div>
                                     {[4, 3, 2, 1].map(rating => (
-                                        <Button color="danger" className="mx-1" key={rating} onClick={() => this.handleFilterRating(rating)}>{rating}</Button>
+                                        <Button color="danger" className="mx-1" key={"R"+rating} onClick={() => this.handleFilterRating(rating)}>{rating}</Button>
                                     ))}
                                 </div>
                             </div>
@@ -91,7 +146,7 @@ class AllProducts extends React.Component {
                                                 <div className="col-8">
                                                     <h3>{item.name}</h3>
                                                     <div>{item.place}</div>
-                                                    <div style={{ fontStyle: "italic", fontFamily: "Cambria", fontSize: 20, fontWeight: "bold" }}>{item.category}</div>
+                                                    <div style={{ fontStyle: "italic", fontFamily: "Cambria", fontSize: 20, fontWeight: "bold" }}>{item.category.map(a => a.menu)}</div>
                                                     <div >
                                                         {item.payment.card && "Card Accepted"}<br />
                                                         {item.payment.cash && "Cash Accepted"}

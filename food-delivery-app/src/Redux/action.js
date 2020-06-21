@@ -20,9 +20,10 @@ export const handleSort = (payload) => ({
     payload
 })
 
-export const addToCart = (id) => ({
+export const addToCart = (payload1,payload2) => ({
     type: actions.ADD_TO_CART,
-    id
+    payload1,
+    payload2
 })
 
 export const removeFromCart = (id) => ({
@@ -30,7 +31,15 @@ export const removeFromCart = (id) => ({
     id
 })
 
-export const addToOrders = (id) => ({
-    type: actions.ADD_TO_ORDERS,
+export const addItemsToRestaurant = (id) => ({
+    type: actions.ADD_ITEMS_TO_RESTAURANT,
     id
+})
+export const subtractionQty = (payload) => ({
+    type: actions.DECREMENT_QUANTITY,
+    payload
+})
+export const loggedInUserName = (payload) =>({
+    type : actions.LOGGED_IN_USERNAME,
+    payload
 })

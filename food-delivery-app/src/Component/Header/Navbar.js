@@ -10,29 +10,19 @@ import {
   Nav,
   NavItem
 } from 'reactstrap';
+import { connect } from 'react-redux';
 
 
-const links = [
-  { to: '/AllProducts', text: 'Search'},
-  { to: '/Login', text: 'Sign in' },
-  { to: '/Cart', text: 'Cart' }
-];
 
-const createNavItem = ({ to, text }) => (
-  <NavItem className="m-3" key={text}>
-    <Link to={to}>{text}</Link>
-  </NavItem>
-);
 
-export default class NavbarHeader extends Component {
+
+class NavbarHeader extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       isOpen: false
     };
-
-
   }
 
   toggle = () => {
@@ -42,20 +32,36 @@ export default class NavbarHeader extends Component {
   }
 
   render() {
+    const { logName}  = this.props
     return (
       <div >
         <div style={{ boxShadow: "5px 5px 10px grey", position: "fixed", top: 0, width: "100%", zIndex: 10000 }}>
           <Navbar color="white" expand="md">
-            <NavbarBrand ><Link to='/'><img src={logoFoodly} alt="" style={{ height: 60 }} /></Link></NavbarBrand>
+            <Link to='/'><img src={logoFoodly} alt="" style={{ height: 40 }} /></Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto " navbar>
-                {links.map(createNavItem)}
+                <NavItem className="m-3">
+                    <Link to='/AllProducts'>Search</Link>
+                </NavItem>
+                <NavItem className="m-3">
+                    {logName? logName:(<Link to='/Login'>Sign In</Link>)}
+                </NavItem>
+                
+                <NavItem className="m-3">
+                    <Link to='/Cart'>Cart</Link>
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
         </div>
+        
       </div>
     );
   }
 }
+const mapStateToProps = state => ({
+  logName: state.logName
+  
+})
+export default connect(mapStateToProps)(NavbarHeader)
