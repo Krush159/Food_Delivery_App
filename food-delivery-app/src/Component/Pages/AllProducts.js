@@ -38,7 +38,7 @@ class AllProducts extends React.Component {
         console.log(data)
         return (
             <div className="container-fluid">
-                <div className='container-fluid bg-dark' style={{ marginTop: 75, height: 400, alignItems: "center" }}>
+                <div style={{ marginTop: 75, height: 400, alignItems: "center", backgroundColor:"rgb(141, 0, 0)" }}>
                     <div className="carousel slide container" data-ride="carousel">
                         <ol className="carousel-indicators">
                             <li data-slide-to="0" className="active"></li>

@@ -39,6 +39,10 @@ export const subtractionQty = (payload) => ({
     type: actions.DECREMENT_QUANTITY,
     payload
 })
+export const additionQty = (payload) => ({
+    type: actions.INCREMENT_QUANTITY,
+    payload
+})
 export const loggedInUserName = (payload) =>({
     type : actions.LOGGED_IN_USERNAME,
     payload

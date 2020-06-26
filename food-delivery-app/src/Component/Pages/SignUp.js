@@ -53,7 +53,7 @@ export default class SignUp extends React.Component {
         const { name, email, username, password, mobile } = this.state
         return (
             <>
-                <div className="container rounded" style={{ padding: "5px 60px", marginTop: 80, width: "550px", textAlign: "left", backgroundColor: "lightgrey", border: "1px solid grey" }}>
+                <div className="container rounded" style={{ height:"100vh", padding: "5px 60px", marginTop: 80, width: "550px", textAlign: "left", backgroundColor: "lightgrey", border: "1px solid grey" }}>
 
                     <form onSubmit={(e) => this.handleSubmit(e)}>
                         <div ><h1 style={{ fontFamily: "Cambria", textAlign: "center", color: "grey" }}>SIGN UP</h1></div>
