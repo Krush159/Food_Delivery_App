@@ -29,7 +29,7 @@ export default class Footer extends React.Component {
                             <h5 className="text-white ">Support</h5>
                             <div className="gutter-bottom--mobile ">
                                 <div>24/7 support</div>
-                                <div>Shopify Help Center</div>
+                                <div>Help Center</div>
                                 <div>Forums</div>
                                 <div>API documentation</div>
                                 <div>Free tools</div>
@@ -45,13 +45,13 @@ export default class Footer extends React.Component {
                                 <ul>
                                     <li>
                                         <a href="https://wa.me/918893627252">
-                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <i className="fa fa-whatsapp" aria-hidden="true"></i>
                                             <span> +91 645121545213</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:support@foodly.com">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <i className="fa fa-envelope" aria-hidden="true"></i>
                                             <span>support@foodly.com</span>
                                         </a>
                                     </li>

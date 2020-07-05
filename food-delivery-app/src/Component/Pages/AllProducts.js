@@ -8,7 +8,8 @@ import newfood from '../../Resource/newfood.jpg'
 import carou1 from '../../Resource/carousal 1.jpg'
 import carou2 from '../../Resource/carousel-1.png'
 import carou3 from '../../Resource/carousel-2.png'
-// import { data } from '../../data'
+import carou4 from '../../Resource/carousal 4.jpg'
+import 'font-awesome/css/font-awesome.min.css';
 
 class AllProducts extends React.Component {
     constructor(props) {
@@ -37,48 +38,54 @@ class AllProducts extends React.Component {
         const { data, match } = this.props
         console.log(data)
         return (
-            <div className="container-fluid">
-                <div style={{ marginTop: 75, height: 400, alignItems: "center", backgroundColor:"rgb(141, 0, 0)" }}>
-                    <div className="carousel slide container" data-ride="carousel">
-                        <ol className="carousel-indicators">
-                            <li data-slide-to="0" className="active"></li>
-                            <li data-slide-to="1"></li>
-                            <li data-slide-to="2"></li>
-                        </ol>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src={carou1} className="d-block w-100" alt="..." height="400px" />
-                                <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
-                                    <h1>50% off on all order*</h1>
-                                    <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={carou2} className="d-block w-100" alt="..." height="400px" />
-                                <div className="carousel-caption d-none d-md-block  bg-white" style={{ opacity: 0.5, color: "black" }}>
-                                    <h1>50% off on all order*</h1>
-                                    <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={carou3} className="d-block w-100" alt="..." height="400px" />
-                                <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
-                                    <h1>50% off on all order*</h1>
-                                    <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
-                                </div>
+            <>
+                <div id="myCarousel" className="carousel slide container-fluid " data-ride="carousel" style={{ marginTop: 75, height: 400, alignItems: "center", backgroundColor: "rgb(141, 0, 0)" }}>
+                    <ol className="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img src={carou1} className="d-block w-70" alt="..." height="400px" style={{margin:"auto"}}/>
+                            <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                                <h1>50% off on all order*</h1>
+                                <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
                             </div>
                         </div>
-                        <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Previous</span>
-                        </a>
-                        <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Next</span>
-                        </a>
+                        <div className="carousel-item">
+                            <img src={carou2} className="d-block w-70" alt="..." height="400px" style={{margin:"auto"}}/>
+                            <div className="carousel-caption d-none d-md-block  bg-white" style={{ opacity: 0.5, color: "black" }}>
+                                <h1>50% off on all order*</h1>
+                                <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <img src={carou3} className="d-block w-80" alt="..." height="400px" style={{margin:"auto"}}/>
+                            <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                                <h1>50% off on all order*</h1>
+                                <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <img src={carou4} className="d-block w-70" alt="..." height="400px" style={{margin:"auto"}}/>
+                            <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                                <h1>50% off on all order*</h1>
+                                <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
+                            </div>
+                        </div>
                     </div>
+                    <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
+                    </a>
                 </div>
-                <div style={{ marginLeft: 350, position: "fixed", top: 15, width: "700px", zIndex: 10000 }}>
+                {/* <div style={{ marginLeft: 350, position: "fixed", top: 15, width: "700px", zIndex: 10000 }}>
                     <div className="input-group">
                         <input
                             type="text"
@@ -101,70 +108,58 @@ class AllProducts extends React.Component {
                             >Search</button>
                         </div>
                     </div>
-                </div>
-                <div className="row mt-5">
-                    <div className="col-3">
-                        <div>
-                            <div className="col-12" >Filter</div>
-                            <hr></hr>
-                            <div className="d-flex justify-content-between my-1">
-                                <div>Ratings</div>
-                                <div>
-                                    {[4, 3, 2, 1].map(rating => (
-                                        <Button color="danger" className="mx-1" key={"R"+rating} onClick={() => this.handleFilterRating(rating)}>{rating}</Button>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="d-flex justify-content-between ">
-                                <div>Payments</div>
-                                <div>
-                                    {["all", "card", "cash"].map(method => (
-                                        <Button color="danger" className="mx-1" key={method} onClick={() => this.handleNewPayment(method)}>{method}</Button>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="d-flex justify-content-between my-1">
-                                <div>Price</div>
-                                <div>
-                                    {["asc", "desc"].map(order => (
-                                        <Button color="danger" className="mx-1" key={order} onClick={() => this.handleNewSort(order)}>{order}</Button>
-                                    ))}
-                                </div>
+                </div> */}
+                <div className="container-fluid row mt-5 d-flex justify-content-center align-items-start ">
+                    <div className="col-3 mt-0">
+                        <div className="col-12" >Filter</div>
+                        <hr></hr>
+                        <div className="col-12 " style={{ border: "1px solid lightgrey", backgroundColor: "rgb(246, 246, 246)", padding: "20px 0px", borderRadius: "5px" }}>
+                            <div className="col-12">Ratings</div>
+                            <div className=" col-12 d-md-flex ">
+                                {[4, 3, 2, 1].map(rating => (
+                                    <button style={{ borderRadius: 5 }} className="col-sm-12  mb-2 mb-sm-2 flex-fill mx-1 btn btn-danger btn-sm " key={"R" + rating} onClick={() => this.handleFilterRating(rating)}>{rating}</button>
+                                ))}
                             </div>
                         </div>
+                        <div className="col-12 my-3" style={{ border: "1px solid lightgrey", backgroundColor: "rgb(246, 246, 246)", padding: "20px 0px", borderRadius: "5px" }}>
+                            <div className="col-12">Payments</div>
+                            <div className="col-12 d-md-flex">
+                                {["ALL", "CARD", "CASH"].map(method => (
+                                    <button style={{ borderRadius: 5 }} className="col-sm-12 mb-2 mb-sm-2 flex-fill mx-1 btn btn-danger btn-sm" key={method} onClick={() => this.handleNewPayment(method)}>{method}</button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="col-12" style={{ border: "1px solid lightgrey", backgroundColor: "rgb(246, 246, 246)", padding: "20px 0px", borderRadius: "5px" }}>
+                            <div className="col-12">Price</div>
+                            <div className="col-12 d-md-flex">
+                                {["LOW TO HIGH", "HIGH TO LOW"].map(order => (
+                                    <button style={{ borderRadius: 5 }} className="col-sm-12 mb-2 mb-sm-2 flex-fill mx-1 btn btn-danger btn-sm" key={order} onClick={() => this.handleNewSort(order)}>{order}</button>
+                                ))}
+                            </div>
+                        </div>
+
                     </div>
-                    <div className="col-9">
+                    <div className="col-9 row ">
                         {data
                             .map(item => (
-                                (<div className={styles.card} className="row">
-                                    <div className={styles.main} >
-                                        <div className={styles.header} >
-                                            <div className={styles.img} className="col-4" >
-                                                <img style={{ borderRadius: 10, textAlign: "left" }} src={newfood} alt="mainImage" height="100%"></img>
-                                            </div>
-                                            <div className={styles.details} className="col-8 row" style={{ borderRadius: 10, textAlign: "left", backgroundColor: "rgb(141, 0, 0)", color: "white", paddingTop: 10 }}>
-                                                <div className="col-8">
-                                                    <h3>{item.name}</h3>
-                                                    <div>{item.place}</div>
-                                                    <div style={{ fontStyle: "italic", fontFamily: "Cambria", fontSize: 20, fontWeight: "bold" }}>{item.category.map(a => a.menu)}</div>
-                                                    <div >
-                                                        {item.payment.card && "Card Accepted"}<br />
-                                                        {item.payment.cash && "Cash Accepted"}
-                                                    </div>
-                                                </div>
-                                                <div className={styles.rate} className="col-4">
-                                                    <div style={{ fontSize: 20, fontWeight: "bold", color: "white", backgroundColor: "green", textAlign: "center", borderRadius: 10, width: 50 }}>
-                                                        {item.ratings}</div>
-                                                    <div>{item.votes}</div>
-                                                    <div>{item.reviews}</div>
-                                                    <Link to={`${match.url}/${item.name}`}>
-                                                        <Button color="danger" className={styles.side} >Order Online &rArr;</Button>
-                                                    </Link>
-                                                </div>
-                                            </div>
 
+                                (<div className="card-deck col-lg-4 col-md-6 col-sm-12">
+                                    <div className="card mb-4 "   >
+                                        <img src={newfood} className="card-img-top" alt="..." />
+                                        <div style={{ fontSize: 20, fontWeight: "bolder", color: "red", position: "absolute", right: 0, backgroundColor: "yellow", width: 60, opacity: 0.9, borderRadius: 3 }}>
+                                            <i class="fa fa-star" style={{ fontSize: 18, zIndex: 9, marginRight: 5 }}></i>{item.ratings}
                                         </div>
 
+                                        <div className="card-body">
+                                            <h5 className="card-title">{item.name}</h5>
+                                            <div className="card-text" style={{ fontStyle: "italic" }}>{item.category.map(elem => (<small>{elem.menu}, </small>))}</div>
+                                        </div>
+                                        <div className="card-footer">
+                                            <Link to={`${match.url}/${item.name}`}>
+                                                <Button color="danger" className={styles.side} >Order Online <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></Button>
+                                            </Link>
+
+                                        </div>
                                     </div>
 
                                 </div>)
@@ -174,7 +169,7 @@ class AllProducts extends React.Component {
                         }
                     </div>
                 </div>
-            </div >
+            </>
         )
     }
 }

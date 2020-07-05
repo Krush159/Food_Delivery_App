@@ -4,7 +4,8 @@ const initState = {
     data: data,
     cart: [],
     logName:"",
-    user: []
+    user: [],
+    search: false
     
 }
 const reducer = (state = initState, action) => {
@@ -115,6 +116,11 @@ const reducer = (state = initState, action) => {
                 ...state,
                 logName: action.payload
             }
+        // case actions.OPEN_SEARCH:
+        //     return {
+        //         ...state,
+        //         search: true
+        //     }
         case actions.ADD_ITEMS_TO_RESTAURANT:
             return { ...state }
         default:
