@@ -1,5 +1,5 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect,Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { subtractionQty,additionQty } from '../../Redux/action'
 import styles from './Cart.module.css'
@@ -15,6 +15,7 @@ class CartItems extends React.Component {
     handleAdditionQty = (id) => {
         this.props.additionQty(id)
     }
+   
     render() {
         const { cart } = this.props
         let seriel = 1
@@ -24,7 +25,7 @@ class CartItems extends React.Component {
                     {cart.length === 0 ?
                         (<div>
                             <img src={emptyCart} alt="" />
-                            <div><button className="btn btn-success " onClick={<Redirect to="/AllProducts" />}>Search Your Nearby Restaurant</button></div>
+                            <div><Link to="/AllProducts" className="btn btn-success ">Search Your Nearby Restaurant</Link></div>
                         </div>)
                         : <div className="row">
                             <div className="col-lg-7">

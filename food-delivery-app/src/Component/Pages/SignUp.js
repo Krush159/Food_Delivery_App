@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 export default class SignUp extends React.Component {
@@ -11,7 +12,7 @@ export default class SignUp extends React.Component {
             username: '',
             password: '',
             mobile: '',
-
+            isRegd: false
         }
     }
     handleChange = (e) => {
@@ -43,6 +44,7 @@ export default class SignUp extends React.Component {
             username: '',
             password: '',
             mobile: '',
+            isRegd:true
         })
     }
     validateEmail = (email) => {

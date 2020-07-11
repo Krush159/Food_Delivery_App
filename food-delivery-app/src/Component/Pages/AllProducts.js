@@ -49,28 +49,28 @@ class AllProducts extends React.Component {
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img src={carou1} className="d-block w-70" alt="..." height="400px" style={{margin:"auto"}}/>
-                            <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                            <div className="carousel-caption bg-white" style={{ opacity: 0.5, color: "black" }}>
                                 <h1>50% off on all order*</h1>
                                 <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img src={carou2} className="d-block w-70" alt="..." height="400px" style={{margin:"auto"}}/>
-                            <div className="carousel-caption d-none d-md-block  bg-white" style={{ opacity: 0.5, color: "black" }}>
+                            <div className="carousel-caption bg-white" style={{ opacity: 0.5, color: "black" }}>
                                 <h1>50% off on all order*</h1>
                                 <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img src={carou3} className="d-block w-80" alt="..." height="400px" style={{margin:"auto"}}/>
-                            <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                            <div className="carousel-caption bg-white" style={{ opacity: 0.5, color: "black" }}>
                                 <h1>50% off on all order*</h1>
                                 <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img src={carou4} className="d-block w-70" alt="..." height="400px" style={{margin:"auto"}}/>
-                            <div className="carousel-caption d-none d-md-block bg-white" style={{ opacity: 0.5, color: "black" }}>
+                            <div className="carousel-caption bg-white" style={{ opacity: 0.5, color: "black" }}>
                                 <h1>50% off on all order*</h1>
                                 <h5>*Offer only on 1st order. Valid till 30th Aug,2020. </h5>
                             </div>
@@ -85,7 +85,7 @@ class AllProducts extends React.Component {
                         <span className="sr-only">Next</span>
                     </a>
                 </div>
-                {/* <div style={{ marginLeft: 350, position: "fixed", top: 15, width: "700px", zIndex: 10000 }}>
+                <div style={{ position: "fixed", top: 10, width:"240px", zIndex: 10000, left:"50%", marginLeft:"-120px"}}>
                     <div className="input-group">
                         <input
                             type="text"
@@ -108,8 +108,8 @@ class AllProducts extends React.Component {
                             >Search</button>
                         </div>
                     </div>
-                </div> */}
-                <div className="container-fluid row mt-5 d-flex justify-content-center align-items-start ">
+                </div>
+                <div className="container-fluid row mt-5 d-flex justify-content-center align-items-start " style={{position:"sticky"}}>
                     <div className="col-3 mt-0">
                         <div className="col-12" >Filter</div>
                         <hr></hr>
@@ -122,7 +122,7 @@ class AllProducts extends React.Component {
                             </div>
                         </div>
                         <div className="col-12 my-3" style={{ border: "1px solid lightgrey", backgroundColor: "rgb(246, 246, 246)", padding: "20px 0px", borderRadius: "5px" }}>
-                            <div className="col-12">Payments</div>
+                            <div className="col-12">Payment</div>
                             <div className="col-12 d-md-flex">
                                 {["ALL", "CARD", "CASH"].map(method => (
                                     <button style={{ borderRadius: 5 }} className="col-sm-12 mb-2 mb-sm-2 flex-fill mx-1 btn btn-danger btn-sm" key={method} onClick={() => this.handleNewPayment(method)}>{method}</button>
@@ -139,7 +139,7 @@ class AllProducts extends React.Component {
                         </div>
 
                     </div>
-                    <div className="col-9 row ">
+                    <div className="col-9 row" style={{justifyContent:"center"}}>
                         {data
                             .map(item => (
 
