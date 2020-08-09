@@ -1,6 +1,6 @@
 # Food_Delivery_App
 
-A food delivery app for some basic features.
+A food delivery app with some basic features.
 
 #### npm dependencies
   1. redux 
