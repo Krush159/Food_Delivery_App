@@ -2,6 +2,13 @@
 
 A food delivery app with some basic features.
 
+![](https://i.ibb.co/4P8xJjR/Screenshot-2020-09-03-React-App.png)
+![](https://i.ibb.co/wLxqm9B/Screenshot-2020-09-03-React-App-1.png)
+![](https://i.ibb.co/WDRtDBJ/Screenshot-2020-09-03-React-App-2.png)
+![](https://i.ibb.co/nkL8mLN/Screenshot-2020-09-03-React-App-3.png)
+
+
+
 #### npm dependencies
   1. redux 
   2. react-redux 
