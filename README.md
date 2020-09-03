@@ -7,6 +7,11 @@
 ![](https://i.ibb.co/WDRtDBJ/Screenshot-2020-09-03-React-App-2.png)
 ![](https://i.ibb.co/nkL8mLN/Screenshot-2020-09-03-React-App-3.png)
 
+
+### View Demo: [Foodly](https://food-delivery-app-puce.vercel.app/)
+### View Source Code: [Click here](https://github.com/Krush159/Food_Delivery_App)
+
+
 ### *A food delivery app with some basic features.*
 
 #### Functionalities
