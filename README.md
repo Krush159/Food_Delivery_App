@@ -16,14 +16,14 @@
   4. Select and add them to cart
 
 #### To run the code on your computer
-  - >`Clone the repository`
-  - >`install npm`
-  - >`install dependencies`
+  - > Clone the repository
+  - > install npm
+  - > install dependencies
       - `redux` 
       - `react-redux` 
       - `bootstrap` 
       - `react-bootstrap` 
       - `redux-thunk axios` 
       - `react-router-dom`
-  - >`run command`
+  - > run command
       - `npm start`
